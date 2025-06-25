@@ -1,0 +1,43 @@
+/* Sub Header */
+
+@media screen and (max-width: 714px){
+  .sub-header{
+    place-items: center;
+  }
+  .sub-header-container{
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  .sub-header .sub-header-container .sub-header-item {
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+  }
+  .widget-whatsapp-call {
+    position: absolute;
+    text-align: center;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+/* Sub Header */
+
+@media screen and (max-width: 714px){
+  .main-header{
+    position: relative;
+  }
+  .main-navegador{
+    border-radius: 0;
+    grid-template-columns: auto auto;
+    transform: translateY(0) !important;
+    transition: all 0.6s ease-in-out;
+    place-content: space-between;
+  }
+  .main-menu{
+    display: none !important;
+  }
+   .hamburguerbtn{
+    display: block !important;
+   }
+}
