@@ -1,12 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  color: var(--white);
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 html {
   scroll-behavior: smooth;
   font-size: 100%;
+
 }
 :root {
   --black: black;
@@ -18,8 +19,15 @@ html {
   --green2: rgb(3, 143, 3);
   --blueoscuro: rgb(18, 18, 112);
 }
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 10rem;
+  width: 100%;
+  gap: 16px;
+}
 
-/* Sub Header */
+/* 1. Sub Header */
 
 .sub-header {
   display: grid;
@@ -71,12 +79,16 @@ html {
   padding: 10px;
   border-radius: 50%;
   transition: all 0.6s ease-in-out;
+
+  a{
+    color: var(--white);
+  }
 }
 .widget-whatsapp-call:hover {
   background: var(--green2);
 }
 
-/* Main Header */
+/* 2. Main Header */
 
 .main-header {
   display: grid;
@@ -136,6 +148,7 @@ a {
   list-style: none;
   text-decoration: none;
   position: relative;
+  color: var(--black);
 }
 .main-menu-rigth {
   display: grid;
@@ -154,6 +167,7 @@ a {
   .call, .hamburguerbtn {
     padding: 15px;
     background: var(--blueoscuro);
+    color: var(--white);
   }
   .hamburguerbtn{
     border-radius: 50% !important;
@@ -164,6 +178,7 @@ a {
     background: var(--green);
     transition: all 0.6s ease-in-out;
     border-radius: 50%;
+    color: var(--white);
   }
 }
 .main-menu-rigth-item .whatsapps:hover {
@@ -296,7 +311,7 @@ a {
   width: 100vw;
 }
 
-/* Slider */
+/* 3. Slider */
 
 .slider-section {
   position: relative;
@@ -341,7 +356,7 @@ a {
     bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 4;
+    z-index: 2;
     gap: 10px;
 
     .slider-dot {
@@ -366,4 +381,21 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* 4. About section */
+
+.about-container .imgAbout{
+  grid-column: span 6;
+
+  img{
+    width: 100%;
+    height: 588px;
+    object-fit: cover;
+    object-position: 28px -219px;
+  }
+}
+.about-container .textAbout{
+  grid-column: span 6;
+  color: var(--black);
 }

@@ -1,6 +1,7 @@
-/* Sub Header */
-
 @media screen and (max-width: 714px){
+
+  /* Sub Header */
+
   .sub-header{
     place-items: center;
   }
@@ -19,11 +20,9 @@
     right: 10px;
     bottom: 10px;
   }
-}
 
-/* Sub Header */
+  /* Main Header navbar */
 
-@media screen and (max-width: 714px){
   .main-header{
     position: relative;
   }
@@ -40,4 +39,32 @@
    .hamburguerbtn{
     display: block !important;
    }
+}
+
+@media screen and (max-width: 527px){
+  
+  /* Navbar */
+
+  .menulateral{
+    width: 25rem; 
+  }
+}
+
+@media screen and (max-width: 413px){
+
+  /* Navbar */
+
+  .menulateral{
+    width: 18.75rem; 
+  }
+}
+
+@media screen and (max-width: 356px){
+
+  /* Navbar */
+
+  .main-navegador{
+    padding: 0 .3125rem 0 0;
+
+  }
 }
