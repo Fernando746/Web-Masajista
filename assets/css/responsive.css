@@ -1,3 +1,24 @@
+@media screen and (min-width: 1400px) {
+  
+  /* about section */
+  
+  .about-container{
+    max-width: 1200px;
+  }
+  .about-container .imgAbout img {
+    object-position: 50% 80%;
+  }
+}
+
+@media screen and (max-width: 914px){
+
+  /* About section */
+
+  .about-container .imgAbout img{
+    aspect-ratio: 3/2;
+  }
+}
+
 @media screen and (max-width: 714px){
 
   /* Sub Header */
