@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 html {
   scroll-behavior: smooth;
   font-size: 100%;
-
+  background-color: var(--white);
 }
 :root {
   --black: black;
@@ -19,23 +19,25 @@ html {
   --green2: rgb(3, 143, 3);
   --blueoscuro: rgb(18, 18, 112);
 }
-.grid-container-autofit{
+.grid-container-autofit {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(287px, 1fr));
-  padding: 0 10rem;
+  padding: 5rem 10rem;
   width: 100%;
   gap: 20px;
-  align-items: start;
+  align-items: center;
   margin-left: auto;
+  max-width: 1330px;
   margin-right: auto;
 }
-.grid-container{
+.grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   padding: 0 10rem;
   width: 100%;
   gap: 20px;
   align-items: start;
+  max-width: 1330px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -59,7 +61,9 @@ html {
     grid-template-columns: repeat(2, auto);
     align-items: center;
     justify-content: center;
+    color: var(--white);
     gap: 10px;
+    background-color: transparent;
 
     i {
       color: var(--rojo);
@@ -93,7 +97,7 @@ html {
   border-radius: 50%;
   transition: all 0.6s ease-in-out;
 
-  a{
+  a {
     color: var(--white);
   }
 }
@@ -139,10 +143,10 @@ html {
 
   .dropdown-item li {
     text-decoration: none;
-    padding: .625rem 1.25rem;
+    padding: 0.625rem 1.25rem;
     width: 100%;
 
-    a{
+    a {
       display: inline-block;
       transition: all 0.6s ease-in-out;
     }
@@ -177,12 +181,13 @@ a {
       text-decoration: none;
     }
   }
-  .call, .hamburguerbtn {
+  .call,
+  .hamburguerbtn {
     padding: 15px;
     background: var(--blueoscuro);
     color: var(--white);
   }
-  .hamburguerbtn{
+  .hamburguerbtn {
     border-radius: 50% !important;
     display: none;
   }
@@ -233,17 +238,18 @@ a {
   visibility: hidden;
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out, max-height 0.6s ease-in-out;
+  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out,
+    max-height 0.6s ease-in-out;
 }
 .dropdown:hover .dropdown-item {
   opacity: 1;
   visibility: visible;
   max-height: 500px;
 }
-.dropdown-item li:hover{
+.dropdown-item li:hover {
   background-color: var(--black);
 }
-.dropdown-item li:hover a{
+.dropdown-item li:hover a {
   color: var(--rojofuerte);
   transform: translateX(10px);
 }
@@ -278,7 +284,8 @@ a {
   padding: 10px;
   text-align: center;
 
-  p,h4 {
+  p,
+  h4 {
     text-align: start;
   }
 }
@@ -292,18 +299,18 @@ a {
   margin: 1rem 0;
   text-align: start;
 }
-.menulateral .menu-list li h5{
+.menulateral .menu-list li h5 {
   color: var(--rojo);
 }
 .menulateral .menu-list li p {
   margin-left: 0.5rem;
   transition: transform 0.6s ease-in-out;
 
-  a{
+  a {
     font-size: 16px;
   }
 }
-.menulateral .menu-list li p:hover{
+.menulateral .menu-list li p:hover {
   transform: translate(10px, 0px);
 }
 .menulateral.show {
@@ -398,37 +405,66 @@ a {
 
 /* 4. About section */
 
-.about-section{
-  padding: 5rem 0;
-
-  .about-container{
-    align-items: center;
-  }
+.about-container .imgAbout img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
-.about-container .imgAbout{
-  grid-column: auto;
-
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
-}
-.about-container .textAbout{
-  display:grid;
+.about-container .textAbout {
+  display: grid;
   align-items: center;
-  justify-content: center;  
-  grid-column: auto;
+  justify-content: center;
+  gap: 0.625rem;
   color: var(--black);
-  gap: .625rem;
+  text-align: center;
 }
-.textAbout h3{
+.textAbout h3 {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+.textAbout h3 img {
+  width: 20px;
+}
+.textAbout .box-link {
+  display: flex;
+  justify-content: center;
+  gap: 4.25rem;
+  margin-top: 1.25rem;
+}
+.textAbout .box-link a {
+  color: var(--rojo);
+  font-size: 1.25rem;
+  transition: all 0.6s ease-in-out;
 
-  img{
-    width: 20px;
+  i{
+    font-size: 1.875rem;
   }
+}
+.description-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.imgcontainer-about {
+  width: 100%;
+  max-width: 120px; 
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.imgcontainer-about img {
+  width: 100%;
+  height: 86%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
 }

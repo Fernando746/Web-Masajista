@@ -2,9 +2,6 @@
   
   /* about section */
   
-  .about-container{
-    max-width: 1200px;
-  }
   .about-container .imgAbout img {
     object-position: 50% 80%;
   }
