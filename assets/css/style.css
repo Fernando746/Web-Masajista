@@ -405,6 +405,9 @@ a {
 
 /* 4. About section */
 
+.about-section{
+  padding: 6.9375rem
+}
 .about-container .imgAbout {
   display: flex;
   align-items: flex-start;
@@ -428,6 +431,15 @@ a {
     right: 57px;
     border-radius: 33px;
   }
+  .imgAbout-3{
+    position: absolute;
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    top: 43px;
+    right: 87px;
+    border-radius: 33px;
+  }
 }
 .about-container .imgAbout::before{
   content: " ";
@@ -443,33 +455,37 @@ a {
 }
 .about-container .textAbout {
   display: grid;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 0.625rem;
   color: var(--black);
-  text-align: center;
 }
 .textAbout h3 {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   gap: 10px;
 }
-.textAbout h3 img {
+.textAbout h4 img {
   width: 20px;
+}
+.subtitle-aboutsection{
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .textAbout .box-link {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 4.25rem;
   margin-top: 1.25rem;
 }
 .textAbout .box-link a {
   color: var(--rojo);
-  font-size: 1.25rem;
   transition: all 0.6s ease-in-out;
 
   i {
-    font-size: 1.875rem;
+    font-size: 1.625rem;
+    transition: transform 0.6s ease-in-out;
   }
 }
 .description-box {
@@ -486,15 +502,100 @@ a {
 }
 .imgcontainer-about {
   width: 100%;
-  max-width: 81px;
+  max-width: 3.75rem;
   aspect-ratio: 1/1;
   overflow: hidden;
 }
-
 .imgcontainer-about img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   border-radius: 50%;
+}
+.box-link a i:hover{
+  color: var(--rojofuerte);
+  transform: scale(1.2);
+}
+.btn-general{
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 6.25rem;
+  text-align: center;
+  padding: .625rem;
+  margin-top: 1.3125rem;
+}
+.wraper-section-flot{
+  display: grid;
+  place-content: center;
+  /* margin-top: -100px; */
+  /* margin-bottom: 2rem; */
+  z-index: 2;
+  position: relative;
+  padding: 1.5625rem;
+}
+.wraper-section-flot .container-wraper-flot{
+  display: grid;
+  position: relative;
+  place-items: center;
+  padding: 3rem;
+  background-image: url(../img/home/fondowraper.jpg);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 1rem;
+  max-width: 1000px;
+  width: 90%;
+  color: var(--white);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  filter: brightness(0.9);
+  transition: transform 0.8s ease-in-out;
+}
+.wraper-section-flot .container-wraper-flot::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #013083;
+  border-radius: 1rem;
+  transition: all 0.6s ease-in-out;
+  z-index: -1;
+  opacity: 0%;
+}
+.wraper-section-flot .container-wraper-flot:hover::before {
+  opacity: 39%;
+  z-index: 0;
+}
+.container-wraper-flot:hover{
+  transform: scale(1.1);
+}
+.container-wraper-flot .flot-conten{
+  display: grid;
+  place-items: center;
+  gap: 1.5rem;
+  color: var(--white);
+  font-weight: bold;
+}
+.flot-btn{
+  position: relative;
+}
+.flot-btn::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  border-radius: 50%;
+  top: -3px;
+  z-index: 2;
+}
+.flot-conten h3,
+.flot-conten p,
+.flot-conten a {
+  text-shadow: 1px 1px 0 #000;
 }

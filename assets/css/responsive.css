@@ -14,6 +14,15 @@
   .about-container .imgAbout img{
     aspect-ratio: 3/2;
   }
+  .about-container{
+    padding: 2.25rem 2.75rem;
+    gap: 3.5rem;
+
+  }
+  .about-container .imgAbout picture{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 714px){
