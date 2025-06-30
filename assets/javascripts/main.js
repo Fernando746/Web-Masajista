@@ -3,6 +3,7 @@
 (function () {
     let menu = document.querySelector(".main-header");
     let containerMenu = document.querySelector(".main-navegador");
+    let slider = document.querySelector(".slider-section");
 
     window.addEventListener("scroll", function () {
         let scroll = window.scrollY;
@@ -26,24 +27,29 @@
             }
         } 
         else {
-            
-        if (scroll >= 87) {
-            menu.style.position = "sticky";
-            menu.style.top = "0";
-            menu.style.transform = "translateX(0)";
-            containerMenu.style.setProperty("max-width", "100%", "important");
-            containerMenu.style.borderRadius = "0";
-            containerMenu.style.transform = "translateY(0)";
-            containerMenu.style.transition = "all 0s ease-in-out";
-        } else {
-            menu.style.position = "absolute";
-            menu.style.transform = "translateX(-50%)";
-            menu.style.removeProperty("top");
-            containerMenu.style.borderRadius = "60px";
-            containerMenu.style.transform = "translateY(-11px)";
+            if (scroll >= 90) {
+                menu.style.position = "sticky";
+                menu.style.top = "0";
+                menu.style.left = "50%";
+                menu.style.transform = "translateX(0)";
+                containerMenu.style.setProperty("max-width", "800px", "important");
+                containerMenu.style.borderRadius = "60px";
+                containerMenu.style.transform = "translateY(0)";
+                containerMenu.style.transition = "all 0s ease-in-out";
+                slider.style.marginTop = "-95px";
+            } else {
+                menu.style.position = "absolute";
+                menu.style.left = "50%";
+                menu.style.top = "";
+                menu.style.transform = "translateX(-50%)";
+                containerMenu.style.setProperty("max-width", "800px", "important");
+                containerMenu.style.borderRadius = "60px";
+                containerMenu.style.transform = "translateY(-11px)";
+                containerMenu.style.transition = "all 0s ease-in-out";
+                slider.style.marginTop = "0";
+            }
         }
-    }
-    });
+    });  
 })();
 
 // Button the menu
@@ -121,5 +127,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     console.log("Left ←", sum);
     slider.style.transform = `translateX(-${sum}%)`;
+    });
+});
+
+// 3. accordion section
+
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".accordion li");
+
+    items.forEach((item) => {
+        const content = item.querySelector(".accordion-content");
+        const icon = item.querySelector("h4 span i");
+
+        item.addEventListener("click", () => {
+            const isActive = content.classList.contains("active");
+
+            items.forEach((other) => {
+                other.classList.remove("active");
+                const otherContent = other.querySelector(".accordion-content");
+                const otherIcon = other.querySelector("h4 span i");
+                otherContent.classList.remove("active");
+                otherIcon.classList.remove("fa-chevron-down");
+                otherIcon.classList.add("fa-chevron-right");
+            });
+
+            if (!isActive) {
+                item.classList.add("active");
+                content.classList.add("active");
+                icon.classList.remove("fa-chevron-right");
+                icon.classList.add("fa-chevron-down");
+            }
+        });
     });
 });
