@@ -6,7 +6,11 @@
     object-position: 50% 80%;
   }
 }
-
+@media screen and (max-width: 1200px){
+  .grid-container-autofit{
+    max-width: 1200px;
+  }
+}
 @media screen and (max-width: 914px){
 
   /* About section */

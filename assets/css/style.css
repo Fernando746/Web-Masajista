@@ -7,7 +7,7 @@ html {
   scroll-behavior: smooth;
   font-size: 100%;
   background-color: rgb(247, 240, 240);
-  font-family: 'Lora', serif;
+  font-family: 'Lora', italic;
 }
 :root {
   --black: black;
@@ -24,6 +24,12 @@ html {
   --blueapagado: #15919B;
   --navebajo:#0C6578;
 }
+.pb-0{
+  padding-bottom: 0 !important;
+}
+.pt-0{
+  padding-top: 0 !important;
+}
 .grid-container-autofit {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(287px, 1fr));
@@ -32,7 +38,6 @@ html {
   gap: 20px;
   align-items: center;
   margin-left: auto;
-  max-width: 1430px;
   margin-right: auto;
 }
 .grid-container {
@@ -599,7 +604,7 @@ a {
     height: 100%;
     background-color: transparent;
     border-radius: 30px;
-    border: 3px solid var(--black);
+    border: 3px solid var(--navi);
     top: -5px;
     left: 4px;
     z-index: -1;
@@ -617,12 +622,12 @@ a {
   filter: brightness(0.8);
   background-size: cover;
   background-position: center center;
-  padding-top: 8rem;
+  padding-top: 8rem 48px 48px 48px;
   overflow: hidden;
 
   .sif{
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+    padding-top: 13rem; 
+    padding-bottom: 7rem;
   }
 }
 .info-image {
@@ -633,14 +638,13 @@ a {
   align-items: center;
 }
 .info-image img {
-  max-width: 160%;
-  margin-right: -20.00rem;
-  height: auto;
+  max-width: 180%;
+  margin-right: -54rem;
 }
 .info-box {
   position: absolute;
   top: -1px;
-  left: -4px;
+  left: 57px;
   background: #d0021b;
   color: #fff;
   text-align: center;
@@ -651,7 +655,7 @@ a {
 .info-image .shaper{
   position: absolute;
   top: 0;
-  left: 0;
+  left: 64px;
   width: 100%;
   z-index: -1;
 
@@ -710,7 +714,7 @@ a {
   background: -moz-linear-gradient(270deg, hsla(196, 51%, 59%, 1) 13%, rgb(247, 240, 240) 33%);
   background: -webkit-linear-gradient(270deg, hsla(196, 51%, 59%, 1) 13%, rgb(247, 240, 240) 33%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#62B0CC", endColorstr="#FFFFFF", GradientType=1 );
-  padding: 1.0625rem;
+  padding: 4rem;
 }
 .frequently-Questions-container{
   align-items: flex-start;
@@ -745,8 +749,20 @@ a {
 }
 .accordion h3{
   font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: 'Lora';
+  font-style: italic;
   font-weight: bold;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.875rem;
+  background: var(--blueapagado);
+  padding: .625rem;
+  border-radius: 1rem;
+  width: max-content;
+
+  i{
+    color: var(--black);
+    margin-right: .625rem;
+  }
 }
 .accordion ul{
   display: flex;
@@ -810,4 +826,17 @@ a {
   height: auto;
   opacity: 1;
   visibility: visible;
+}
+
+/* 7. Services section */
+
+.services-section .services-title{
+  display: grid;
+  grid-column: span 12;
+  place-items: center;
+}
+.services-carrusel-wrapper{
+  grid-auto-columns: 287px;
+  grid-auto-flow: column;
+  overflow: hidden;
 }
