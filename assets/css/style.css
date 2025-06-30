@@ -170,7 +170,7 @@ a {
   list-style: none;
   text-decoration: none;
   position: relative;
-  color: var(--black);
+  color: var(--greenfuer);
 }
 .main-menu-rigth {
   display: grid;
@@ -219,7 +219,7 @@ a {
 
   a {
     font-weight: bold;
-    color: var(--greenfuer);
+    color: var(--greentienr);
   }
 }
 .main-menu li.active::after {
