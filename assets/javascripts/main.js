@@ -160,3 +160,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// 4. Services section
+
+document.addEventListener("DOMContentLoaded", function () {
+    let items = document.querySelectorAll(".carousel-item");
+    let textDescription = document.querySelectorAll(".description-item");
+
+    items.forEach((item, index) => {
+        item.addEventListener("mouseenter", () => {
+            textDescription[index].classList.add("actives");
+        });
+
+        item.addEventListener("mouseleave", () => {
+            textDescription[index].classList.remove("actives");
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+});
