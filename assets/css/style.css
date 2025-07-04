@@ -724,11 +724,7 @@ a {
 
 .frequently-Questions-section {
   background: hsla(270, 51%, 59%, 1);
-  background: linear-gradient(
-    181deg,
-    #b1eaf2 13%,
-    rgb(247, 240, 240) 33%
-  );
+  background: linear-gradient(181deg, #b1eaf2 13%, rgb(247, 240, 240) 33%);
   background: -moz-linear-gradient(
     270deg,
     hsl(187, 71%, 82%),
@@ -890,16 +886,17 @@ a {
   position: relative;
   grid-column: span 12;
   overflow-x: hidden;
-  padding: 4.8125rem 30px 30px 30px;
+  padding: 4.8125rem 0 30px 0;
 }
 .carousel-container .wrapper-carousel {
   display: flex;
-  width: calc(100% - 60px);
+  width: 100%;
   gap: 1rem;
 }
 .wrapper-carousel .carousel-item {
+  height: max-content;
   background-color: var(--white);
-  flex: 0 0 calc((100% - 2rem - 60px) / 3);
+  flex: 0 0 calc((100% - 2rem) / 3);
   border-radius: 30px;
   box-shadow: 2px -4px 10px rgba(27, 2, 2, 0.5);
   padding: 0 1.875rem 0 1.875rem;
@@ -939,28 +936,28 @@ a {
     font-size: 1rem;
     text-align: center;
   }
-  hr{
+  hr {
     width: 100%;
     height: 1px;
     background-color: var(--blueapagado);
     margin: 10px 0;
-  }                                  
+  }
 }
-.carousel-content a{
+.carousel-content a {
   position: relative;
-  padding: .875rem;
+  padding: 0.875rem;
   background-color: var(--blueapagado);
   border-radius: 50%;
   z-index: 1;
   overflow: hidden;
 }
-.carousel-content a i{
+.carousel-content a i {
   color: var(--black);
   font-size: 1.5rem;
   transform: rotate(330deg);
   transition: all 0.6s ease-in-out;
 }
-.carousel-content a::after{
+.carousel-content a::after {
   content: "";
   position: absolute;
   top: 0;
@@ -974,40 +971,34 @@ a {
   transition: all 0.6s ease-in-out;
 }
 .carousel-content a:hover::after,
-.carousel-content a:hover i{
+.carousel-content a:hover i {
   color: var(--white);
   transform: translate(0%, 0%);
 }
-.carousel-item:hover{
+.carousel-item:hover {
   background-color: var(--black);
 }
-.carousel-item:hover .carousel-content *:not(h4){
+.carousel-item:hover .carousel-content *:not(h4) {
   color: var(--white);
 }
-.carousel-content .description-item{
-  height: 0;
+.carousel-content .description-item {
+  max-height: 0;
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
-.description-item.actives{
-  height: auto;
+.description-item.actives {
   opacity: 1;
   visibility: visible;
 }
-.btn-carousel{
+
+.btn-carousel {
   position: absolute;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
   background-color: var(--Black-transparent);
   padding: 10px;
   z-index: 2;
-}
-.btn-carousel .btn-left{
-  left: -4px !important;
-}
-.btn-carousel .btn-right{
-  right: -4px !important;
 }
