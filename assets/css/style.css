@@ -744,7 +744,7 @@ a {
 }
 .img-question img {
   width: 100%;
-  aspect-ratio: 7/4;
+  aspect-ratio: 10 / 4;
 }
 .question-conten-text {
   margin-top: 1.25rem;
@@ -857,7 +857,7 @@ a {
 
 .services-section {
   position: relative;
-  padding-top: var(--space-between-intersection);
+  padding: var(--space-between-intersection) 0;
   background: url(../img/home/walpepersection.jpg);
   background-size: cover;
   background-position: center center;
@@ -1024,4 +1024,102 @@ a {
   color: var(--black);
   transform: translate(0%, 0%);
   opacity: 1;
+}
+
+/* 8. Footer section */
+
+.footer-section {
+  padding: 2.9375rem  0 0 0;
+  background-color: var(--blueapagado);
+}
+.footer-container{
+  align-items: flex-start;
+}
+.footer-section .mini-section {
+  grid-column: span 3;
+}
+.footer-section .mini-section2 {
+  grid-column: span 2;
+}
+.footer-section .mini-section3 {
+  grid-column: span 4;
+}
+.copyray{
+  display: flex;
+  grid-column: span 12;
+  padding: 10px 0 5px 0;
+  justify-content: space-between;
+}
+.mini-section .logo-footer {
+  display: flex;
+  justify-content: center;
+}
+.mini-section .text-footer:hover {
+  color: var(--greentienr);
+}
+.mini-section .text-footer {
+  padding: 5px;
+  text-align: center;
+}
+.mini-section .logo-footer img{
+  width: 100%;
+  max-width: 150px;
+  transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
+}
+.mini-section .logo-footer img:hover{
+  filter: drop-shadow(0 0 10px var(--black));
+  transform: scale(1.1);
+}
+.mini-section h3 {
+  font-size: clamp(16px, 1.5vw, 1.125rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--white); 
+  justify-content: flex-start;
+  padding:  0 .625rem;
+  clip-path: polygon(0 0, 88% 0, 100% 100%, 0 100%);
+  background-color: var(--greenfuer);
+}
+.footer-container .mini-section ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: .9375rem 0 0 0;
+  margin: 0;
+  gap: 1.25rem;
+}
+.footer-container .mini-section iframe{
+  padding: .9375rem 0 0 0;
+}
+.mini-section ul li{
+  transition: transform 0.6s ease-in-out;
+}
+.mini-section ul li a {
+  color: var(--black);
+  transition: color 0.6s ease-in-out;
+}
+.mini-section ul li:hover{
+  transform: scale(1.1);
+}
+.mini-section ul li a:hover {
+  color: var(--greentienr);
+  font-weight: bold;
+}
+.copyray .link{
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+}
+.copyray p{
+  display: flex;
+  align-items: center;
+}
+.copyray .link a{
+  padding: .625rem;
+  background-color: var(--blueapagado);
+  color: var(--white);
+  font-size: 1.125rem;
+  border-radius: 50%;
+  transition: all 0.6s ease-in-out;
+  text-decoration: none;
 }
