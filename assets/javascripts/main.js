@@ -175,11 +175,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let target = textDescription[index];
       target.classList.add("actives");
+      target.offsetHeight;
 
-      // Forzamos reflow para activar transición
-      target.offsetHeight; // ← Este toque ninja es esencial
-
-      // Medimos la altura real del contenido
       target.style.maxHeight = target.scrollHeight + "px";
     });
 
