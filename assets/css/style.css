@@ -20,6 +20,11 @@
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   --space-between-intersection: 5rem;
+  --facebook: #1873eb;
+  --twitter:#28a5dc;
+  --instagram:#e72c84;
+  --youtube:#ff0000;
+  --whatsapp:#25d366;
 }
 html {
   scroll-behavior: smooth;
@@ -1092,6 +1097,7 @@ a {
   padding: .9375rem 0 0 0;
 }
 .mini-section ul li{
+  position: relative;
   transition: transform 0.6s ease-in-out;
 }
 .mini-section ul li a {
@@ -1100,6 +1106,19 @@ a {
 }
 .mini-section ul li:hover{
   transform: scale(1.1);
+}
+.mini-section ul li a::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 2px;
+  width: 0%;
+  height: .0625rem;
+  background-color: var(--black);
+  transition: width 0.6s ease-in-out;
+}
+.mini-section ul li a:hover::before {
+  width: 95%;
 }
 .mini-section ul li a:hover {
   color: var(--greentienr);
@@ -1122,4 +1141,32 @@ a {
   border-radius: 50%;
   transition: all 0.6s ease-in-out;
   text-decoration: none;
+}
+.link a:hover{
+  background-color: var(--greentienr);
+  color: var(--black);
+  transform: scale(1.1);
+}
+.link a:hover i{
+  transform: scale(1.1);
+}
+.copyray .link .facebook{
+  background-color: var(--facebook);
+  color: var(--white);
+}
+.copyray .link .twitter{
+  background-color: var(--twitter);
+  color: var(--white);
+}
+.copyray .link .instagram{
+  background-color: var(--instagram);
+  color: var(--white);
+}
+.copyray .link .youtube{
+  background-color: var(--youtube);
+  color: var(--black);
+}
+.copyray .link .whatsapp{
+  background-color: var(--whatsapp);
+  color: var(--white);
 }
