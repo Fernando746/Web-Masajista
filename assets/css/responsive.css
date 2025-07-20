@@ -9,7 +9,7 @@
   .grid-container-autofit {
     max-width: 720px;
   }
-  .grid-container{
+  .grid-container {
     max-width: 750px;
   }
 }
@@ -17,7 +17,7 @@
   .grid-container-autofit {
     max-width: 960px;
   }
-  .grid-container{
+  .grid-container {
     max-width: 960px;
   }
 }
@@ -25,7 +25,7 @@
   .grid-container-autofit {
     max-width: 1140px;
   }
-  .grid-container{
+  .grid-container {
     max-width: 1140px;
   }
 }
@@ -33,18 +33,18 @@
   .grid-container-autofit {
     max-width: 1320px;
   }
-  .grid-container{
+  .grid-container {
     max-width: 1320px;
   }
 }
 @media (min-width: 1600px) {
-  .grid-container-autofit{
+  .grid-container-autofit {
     max-width: 1534px;
   }
-  .grid-container{
+  .grid-container {
     max-width: 1534px;
+  }
 }
-} 
 
 /* ####################### END RESPONSIVE ############################ */
 
@@ -62,7 +62,6 @@
     aspect-ratio: 3/2;
   }
   .about-container {
-    padding: 2.25rem 2.75rem;
     gap: 3.5rem;
   }
   .about-container .imgAbout picture {
@@ -112,7 +111,61 @@
     display: block !important;
   }
 }
-
+@media screen and (max-width: 600px) {
+  /* About section */
+  .about-section {
+    padding: 1rem;
+  }
+  .wraper-section-flot {
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .sif {
+    padding-top: 0 !important;
+  }
+  .info-text {
+    grid-column: span 13;
+    padding: 0;
+    box-shadow: 0 0 0 transparent;
+  }
+  .info-image {
+    grid-column: span 13;
+  }
+  .img-container .img-info-principal .img-base {
+    transform: translateX(0);
+  }
+  .frequently-Questions-section {
+    padding: 0;
+  }
+  .carousel-container .wrapper-carousel .carousel-item {
+    flex: 0 0 calc((100%) / 1);
+  }
+  .carousel-content .description-item {
+    max-height: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+  .footer-section .mini-section {
+    grid-column: span 13;
+  }
+  .footer-section .mini-section2 {
+    grid-column: span 13;
+  }
+  .footer-section .mini-section3 {
+    grid-column: span 13;
+  }
+  .copyray{
+    display: flex;
+    flex-direction: column;
+  }
+  .copyray p{
+    display: flex;
+    font-size: clamp(3px, 3vw, 1.125rem);
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 527px) {
   /* Navbar */
 

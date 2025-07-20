@@ -1046,7 +1046,7 @@ a {
 }
 .copyray{
   display: flex;
-  grid-column: span 12;
+  grid-column: span 13;
   padding: 0px 0 5px 0;
   justify-content: space-between;
 }
@@ -1112,13 +1112,14 @@ a {
 }
 .copyray p{
   display: flex;
+  font-size: clamp(1rem,4vw,1.125rem);
   align-items: center;
 }
 .copyray .link a{
   padding: .625rem;
   background-color: var(--blueapagado);
   color: var(--white);
-  font-size: 1.125rem;
+  font-size: clamp(1rem,4vw,1.125rem);
   border-radius: 50%;
   transition: all 0.6s ease-in-out;
   text-decoration: none;
