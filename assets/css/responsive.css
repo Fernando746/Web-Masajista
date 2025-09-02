@@ -68,18 +68,48 @@
     display: flex;
     justify-content: center;
   }
-  .img-container .img-info-principal .img-base{
+  .img-container .img-info-principal .img-base {
     transform: translateX(60px) !important;
   }
+  .grid-container-autofit {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  }
+  .subtitle-aboutsection {
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
+  }
+  .about-container .textAbout {
+    .textp {
+      font-size: clamp(0.8rem, 2vw, 1.5rem);
+    }
+    .imgcontainer-about img {
+      width: 80%;
+      height: 80%;
+    }
+  }
+  .flot-conten h3,
+  .flot-conten p,
+  .flot-conten a {
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
+  }
 }
-@media  screen and (max-width: 890px) {
-  .carousel-container .wrapper-carousel .carousel-item{
+@media screen and (max-width: 762px) {
+  .footer-section .mini-section {
+    grid-column: span 4 !important;
+  }
+}
+@media screen and (max-width: 890px) {
+  .carousel-container .wrapper-carousel .carousel-item {
     flex: 0 0 calc((100% - 2rem) / 2);
   }
 }
 @media screen and (max-width: 734px) {
-  .container-menu .main-menu{
+  .container-menu .main-menu {
     gap: 14px !important;
+  }
+  .accordion li {
+    h4 {
+      font-size: clamp(0.9rem, 2vw, 1.5rem);
+    }
   }
 }
 @media screen and (max-width: 714px) {
@@ -131,6 +161,9 @@
     margin-bottom: 0;
     padding: 0;
   }
+  .question-conten-text .items i {
+    padding: 0.7rem;
+  }
   .sif {
     padding-top: 0 !important;
   }
@@ -176,6 +209,20 @@
     padding: 10px;
     text-align: center;
   }
+  .textAbout .box-link {
+    gap: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .footer-section .mini-section {
+    grid-column: span 6 !important;
+  }
+  .about-container {
+    padding: 0;
+  }
+  .items .text-card h4 {
+    font-size: clamp(0.9rem, 2vw, 1.125rem);
+  }
 }
 @media screen and (max-width: 527px) {
   /* Navbar */
@@ -198,5 +245,8 @@
 
   .main-navegador {
     padding: 0 0.3125rem 0 0;
+  }
+  .footer-section .mini-section {
+    grid-column: span 13 !important;
   }
 }
