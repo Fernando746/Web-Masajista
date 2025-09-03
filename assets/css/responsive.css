@@ -49,14 +49,12 @@
 /* ####################### END RESPONSIVE ############################ */
 
 @media screen and (min-width: 1400px) {
-  /* about section */
 
   .about-container .imgAbout img {
     object-position: 50% 80%;
   }
 }
 @media screen and (max-width: 914px) {
-  /* About section */
 
   .about-container .imgAbout img {
     aspect-ratio: 3/2;
@@ -91,6 +89,16 @@
   .flot-conten a {
     font-size: clamp(0.8rem, 2vw, 1.5rem);
   }
+  .main-menu-rigth{
+    .hamburguerbtn , .whatsapps{
+      padding: 10px;
+    }
+  }
+  .services-title{
+    span, h3 , p{
+      text-align: center;
+    }
+  }
 }
 @media screen and (max-width: 762px) {
   .footer-section .mini-section {
@@ -100,6 +108,13 @@
 @media screen and (max-width: 890px) {
   .carousel-container .wrapper-carousel .carousel-item {
     flex: 0 0 calc((100% - 2rem) / 2);
+  }
+  .button-menulateral {
+    display: none;
+  }
+  .copyray .link a {
+    padding: 0.5rem;
+    font-size: clamp(0.8rem, 2vw, 1.125rem);
   }
 }
 @media screen and (max-width: 734px) {
@@ -113,9 +128,11 @@
   }
 }
 @media screen and (max-width: 714px) {
-  /* Sub Header */
   .sub-header {
     place-items: center;
+  }
+  .widget-whatsapp-call{
+    display: none;
   }
   .sub-header-container {
     grid-template-columns: 1fr;
@@ -132,9 +149,6 @@
     right: 10px;
     bottom: 10px;
   }
-
-  /* Main Header navbar */
-
   .main-header {
     position: relative;
   }
@@ -153,7 +167,7 @@
   }
 }
 @media screen and (max-width: 600px) {
-  /* About section */
+
   .about-section {
     padding: 1rem;
   }
@@ -225,23 +239,18 @@
   }
 }
 @media screen and (max-width: 527px) {
-  /* Navbar */
 
   .menulateral {
     width: 25rem;
   }
 }
-
 @media screen and (max-width: 413px) {
-  /* Navbar */
 
   .menulateral {
     width: 18.75rem;
   }
 }
-
 @media screen and (max-width: 356px) {
-  /* Navbar */
 
   .main-navegador {
     padding: 0 0.3125rem 0 0;
