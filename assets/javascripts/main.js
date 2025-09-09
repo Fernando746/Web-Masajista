@@ -187,3 +187,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// 4. Beneficios section
+
+document.addEventListener("DOMContentLoaded", function () {
+  let items = document.querySelectorAll(".btn-tag");
+  let img = document.querySelector(".container-img-beneficio img"); // ✅ solo una imagen
+
+  let activo = document.querySelector(".btn-tag.active");
+  if (activo) {
+    img.src = activo.getAttribute("data-img");
+  }
+
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      items.forEach((other) => {
+        other.classList.remove("active");
+      });
+      item.classList.add("active");
+      let nuevaImg = item.getAttribute("data-img");
+      img.src = nuevaImg;
+    });
+  });
+});
+

@@ -127,9 +127,39 @@
     }
   }
 }
-@media screen and (max-width: 714px) {
+@media screen and (max-width: 715px) {
   .sub-header {
     place-items: center;
+  }
+  .beneficio-colum{
+    grid-column: 1 / -1;
+  }
+  .beneficio-semi .buton-benefi{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+  }
+  .container-img-beneficio img{
+    width: 50%;
+    height: auto;
+  }
+  .container-img-beneficio{
+    display: flex;
+    justify-content: center;
+  }
+  .beneficio-semi .buton-benefi .btn-tag{
+    width: 40%;
+  }
+  .beneficio-semi{
+    align-items: center;
+    justify-content: center;
+  }
+  .section-bebefitio{
+    padding-top: 0 !important;
+  }
+  .beneficio-semi .buton-benefi .btn-tag{
+    width: 100%;
+
   }
   .widget-whatsapp-call{
     display: none;
@@ -166,8 +196,7 @@
     display: block !important;
   }
 }
-@media screen and (max-width: 600px) {
-
+@media screen and (max-width: 601px) {
   .about-section {
     padding: 1rem;
   }
@@ -226,6 +255,13 @@
   .textAbout .box-link {
     gap: 0;
   }
+  .section-bebefitio{
+    padding-bottom: 1.875rem !important;
+  }
+  .beneficio-semi{
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
 @media screen and (max-width: 550px) {
   .footer-section .mini-section {
@@ -243,6 +279,18 @@
   .menulateral {
     width: 25rem;
   }
+  
+}
+@media screen and (max-width: 430px) {
+  .beneficio-semi{
+    flex-direction: column;
+  }
+  .beneficio-semi .buton-benefi{
+    width: 100%;
+  }
+  .container-img-beneficio img{
+    width: 55%;
+  }
 }
 @media screen and (max-width: 413px) {
 
@@ -257,5 +305,8 @@
   }
   .footer-section .mini-section {
     grid-column: span 13 !important;
+  }
+  .beneficio-semi{
+    text-align: center;
   }
 }
